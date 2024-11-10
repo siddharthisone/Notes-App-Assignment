@@ -20,6 +20,8 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -173,6 +175,7 @@ class HomeFragment() : Fragment() {
 
             }
 
+
             override fun onDataChanged() {
                 super.onDataChanged()
                 if (itemCount==0)
@@ -212,7 +215,16 @@ class HomeFragment() : Fragment() {
 
        return  when(item.itemId){
              R.id.logout -> {
-                 (activity as MainActivity).onLogout()
+//                 (activity as MainActivity).onLogout()
+
+                 val googleSignInClient = GoogleSignIn.getClient(requireContext(),GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                     .requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build()
+                 )
+
+                 googleSignInClient.signOut().addOnCompleteListener {
+                     (activity as MainActivity).onLogout()
+                 }
+
                  true
              }
            else -> super.onOptionsItemSelected(item)
