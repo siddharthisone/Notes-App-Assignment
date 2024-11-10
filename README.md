@@ -17,6 +17,7 @@ MyNotes is an Android app that enables users to securely create, edit, delete, a
 ## Screenshots 
 
 **Sign In, Sign Up, Forget Password**
+
 <img src="https://github.com/user-attachments/assets/00744457-a88e-469b-9a32-8a644818cf22" width="200" height="450">
 <img src="https://github.com/user-attachments/assets/91edc961-f3e5-4b07-be2a-e1ca17d1f0fb" width="200" height="450">
 <img src="https://github.com/user-attachments/assets/49b73f75-3efd-4f4b-972d-fb0e486426da" width="200" height="450">
