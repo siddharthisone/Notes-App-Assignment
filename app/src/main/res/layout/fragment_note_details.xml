@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.NoteDetails">
+
+    <android.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:title="Note Details"
+        android:navigationIcon="@drawable/baseline_keyboard_backspace_24"
+        android:id="@+id/toolBarOfNoteDetails"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolBarOfNoteDetails"
+        android:id="@+id/noteDetailsTitleLayout"
+        android:background="@drawable/note_background"
+        android:layout_marginTop="11dp"
+        app:boxStrokeWidth="0dp"
+        android:layout_marginEnd="34dp"
+        app:boxBackgroundMode="none"
+        app:hintEnabled="false"
+        android:layout_marginStart="34dp"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:padding="12dp"
+            android:layout_marginEnd="23dp"
+            android:textSize="20sp"
+            android:background="@null"
+            android:hint="Enter Title here"
+            android:id="@+id/noteDetailsTitle"
+            android:textColor="?attr/colorPrimary"
+            tools:ignore="HardcodedText,LabelFor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/noteDetailsTitleLayout"
+        android:background="@drawable/note_background"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="11dp"
+        app:boxStrokeWidth="0dp"
+        android:layout_marginEnd="34dp"
+        app:boxBackgroundMode="none"
+        android:layout_marginBottom="15dp"
+        app:hintEnabled="false"
+        >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/colorPrimary"
+        android:layout_below="@id/toolBarOfNoteDetails"
+        android:nestedScrollingEnabled="true"
+        android:padding="12dp"
+        android:hint="Enter Note here"
+        android:id="@+id/noteDetailsContent"
+        android:gravity="top|left"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="buttonAdd"
+        android:id="@+id/saveNoteFloatingButton1"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/baseline_mode_edit_24"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+</RelativeLayout>

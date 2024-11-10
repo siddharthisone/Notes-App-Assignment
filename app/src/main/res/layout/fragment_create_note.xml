@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.CreateNoteFragment">
+
+    <android.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:navigationIcon="@drawable/baseline_keyboard_backspace_24"
+        android:title="Create new Note"
+        android:id="@+id/toolBarOfCreateNote"
+        tools:ignore="HardcodedText" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/createNoteTitleLayout"
+        android:layout_below="@id/toolBarOfCreateNote"
+        android:layout_marginTop="11dp"
+        app:boxStrokeWidth="0dp"
+        android:background="@drawable/note_background"
+        android:layout_marginEnd="34dp"
+        app:boxBackgroundMode="none"
+        app:hintEnabled="false"
+        android:layout_marginStart="34dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="textMultiLine"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:background="@null"
+            android:hint="Enter Title here"
+            android:id="@+id/createNoteTitle"
+            android:textColor="?attr/colorPrimary"
+            tools:ignore="HardcodedText,LabelFor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/createNoteTitleLayout"
+        android:id="@+id/createNoteContentLayout"
+        android:background="@drawable/note_background"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="11dp"
+        app:boxStrokeWidth="0dp"
+        android:layout_marginEnd="34dp"
+        app:boxBackgroundMode="none"
+        android:layout_marginBottom="15dp"
+        app:hintEnabled="false"
+        >
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:autofillHints=""
+        android:inputType="textMultiLine"
+        android:textColor="?attr/colorPrimary"
+        android:padding="12dp"
+        android:hint="Enter Note here"
+        android:id="@+id/createNoteContent"
+        android:gravity="top|left"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="buttonAdd"
+        android:id="@+id/saveNoteFloatingButtonCreate"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/baseline_cloud_upload_24"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+</RelativeLayout>
