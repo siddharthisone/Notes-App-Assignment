@@ -41,6 +41,7 @@ MyNotes is an Android app that enables users to securely create, edit, delete, a
 - **CreateNoteFragment**: Allows users to create new notes.
 - **EditNoteFragment**: Allows users to edit existing notes.
 - **NoteDetails**: Fragment displaying the details of a selected note.
+- **Network Utility**: To check network state. To ensure while login in and signing up the internet connection should be active.
 
 ## TechStack 
 XML, Kotlin, Android Studio, Firebase
